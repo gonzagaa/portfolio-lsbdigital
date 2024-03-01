@@ -1,0 +1,224 @@
+/* <section class="apresentacao"> */
+section.apresentacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 900px;
+  max-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+section.apresentacao img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+section.apresentacao.oculto img.divisor.dois {
+  transform: translate(0, -700px);
+}
+
+section.apresentacao img.divisor.dois {
+  top: 700px;
+  z-index: 13;
+  transition: all 2s;
+}
+
+section.apresentacao div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+}
+section.apresentacao div.background {
+  z-index: 1;
+  animation: bg 2s ease-in-out infinite;
+}
+@keyframes bg {
+  0% {
+    filter: brightness(100%);
+  }
+  50% {
+    filter: brightness(150%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+section.apresentacao div.fogo.preto {
+  z-index: 2;
+  animation: fogoPreto 60s linear infinite;
+}
+@keyframes fogoPreto {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+section.apresentacao div.icone {
+  z-index: 3;
+  animation: Icone 60s linear infinite;
+
+  filter: drop-shadow(15px 5px 30px #0000004b);
+}
+@keyframes Icone {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -100px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+section.apresentacao div.texto.um {
+  z-index: 7;
+  animation: texto 140s ease-in-out infinite;
+
+  filter: drop-shadow(10px 10px 40px #000000a8);
+}
+section.apresentacao div.personagem {
+  z-index: 8;
+  animation: personagem 30s linear infinite;
+  transition: all 2s;
+}
+section.apresentacao.oculto div.personagem {
+  filter: brightness(200%);
+}
+@keyframes personagem {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.1) translate(0, -50px);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+section.apresentacao div.texto.dois {
+  z-index: 9;
+  animation: texto 140s ease-in-out infinite;
+}
+@keyframes texto {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(50px, -50px);
+  }
+  20% {
+    transform: translate(0, -50px);
+  }
+  30% {
+    transform: translate(-25px, -50px);
+  }
+  40% {
+    transform: translate(0px, -100px);
+  }
+  50% {
+    transform: translate(-75px, 0);
+  }
+  60% {
+    transform: translate(-75px, -75px);
+  }
+  70% {
+    transform: translate(75px, -25px);
+  }
+  80% {
+    transform: translate(-100px, -100px);
+  }
+  90% {
+    transform: translate(25px, -75px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+section.apresentacao div.blush {
+  z-index: 10;
+  animation: blush 2s ease-in-out infinite;
+}
+@keyframes blush {
+  0% {
+    filter: brightness(100%);
+  }
+  50% {
+    filter: brightness(120%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+section.apresentacao div.particulas {
+  z-index: 11;
+  animation: particulas 120s linear infinite;
+  transition: all 1s;
+}
+
+section.apresentacao.oculto div.particulas {
+  filter: brightness(200%);
+}
+
+@keyframes particulas {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Responsivo */
+@media screen and (max-width: 700px) {
+  section.apresentacao {
+    min-height: 450px;
+    max-height: 450px;
+    height: 450px;
+  }
+  section.apresentacao.oculto img.divisor.dois {
+    transform: translate(0, -340px);
+  }
+  section.apresentacao img.divisor.dois {
+    top: 350px;
+  }
+  section.apresentacao img.divisor.um {
+    display: none;
+  }
+  @keyframes personagem {
+    0% {
+      transform: scale(1) translate(0, 0);
+    }
+    50% {
+      transform: scale(1.2) translate(0, 60px);
+    }
+    100% {
+      transform: scale(1) translate(0, 0);
+    }
+  }
+  @keyframes icone {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, -50px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+}

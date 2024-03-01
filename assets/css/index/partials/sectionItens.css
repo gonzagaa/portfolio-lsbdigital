@@ -1,0 +1,97 @@
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  width: min(50rem, 100%);
+  margin-inline: auto;
+
+  padding-inline: 2.4rem;
+}
+
+section {
+  padding-block: 3rem;
+}
+
+#services {
+  background: linear-gradient(180deg, #F2F2F2 0%, #E5E5E5 100%);
+}
+
+#services .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#services header h2 {
+  font-family: var(--estilo);
+  font-size:  clamp(3rem, 1vw, 6rem);
+  color: #ffffff;
+  filter: drop-shadow(2px 2px 10px #0000003d);
+
+  margin-bottom: 3rem;
+}
+
+#services .cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+}
+
+#services .cards .card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 0 1rem 0 0;
+
+  background: #dddddd;
+  border-radius: 1rem;
+}
+
+#services .cards .card .number {
+  background: linear-gradient(75deg, #96FF13 0%, #3BFF00 100%);
+  padding: .5rem;
+  border-radius: .5rem 0 0 .5rem;
+  min-width: 3rem;
+  text-align: center;
+}
+
+#services .cards .card span {
+  font-size: 4rem;
+  font-family: var(--estilo);
+}
+
+#services .cards .card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #797979;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: min(90rem, 100%);
+  }
+}
+
+@media (min-width: 1080px) {
+  .wrapper {
+    width: min(140rem, 100%);
+  }
+}
